@@ -1,45 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+
+import './Navbar.css';
 
 const Navbar = () => {
   return (
     <div>
-      <nav
-        className="navbar"
-        style={{
-          position: 'fixed',
-          top: '0',
-          display: 'flex',
-          width: '100%',
-          height: ' 60px',
-          background: 'rgba(0, 0, 0, 0.5)'
-        }}
-      >
-        <div style={{ color: 'white', margin: '0 5rem', padding: '1.5rem', fontSize: '28px', width:'50%' }}>
+      <nav className="Navbar">
+        <div className="Navbar-Logo">
           Aussie Aid
         </div>
-        <ul
-          style={{
-            display: 'flex',
-            width: '100%',
-            listStyleType: 'none',
-            flexDirection: 'row',
-            justifyContent: 'flex-end'
-          }}
-        >
-          <li style={{ margin: '0 5rem', padding: '.5rem' }}>
-            <a style={{ color: 'white' }} href="#updates">
-              Live Updates
-            </a>
+        <ul className="Navbar-Menu">
+          <li className="Navbar-Menu-ListItem">
+            <Link to="/" className="Navbar-Menu-ListItem-Link">Live Updates</Link>
           </li>
-          <li style={{ margin: '0 5rem', padding: '.5rem' }}>
-            <a style={{ color: 'white' }} href="#info">
-              Info
-            </a>
+          <li className="Navbar-Menu-ListItem">
+            <Link to="/info" className="Navbar-Menu-ListItem-Link">Info</Link>
           </li>
-          <li style={{ margin: '0 5rem', padding: '.5rem' }}>
-            <a style={{ color: 'white' }} href="#donate">
-              Donate
-            </a>
+          <li className="Navbar-Menu-ListItem">
+            <Link to="/donate" className="Navbar-Menu-ListItem-Link">Donate</Link>
           </li>
         </ul>
       </nav>
