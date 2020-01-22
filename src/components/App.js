@@ -58,7 +58,7 @@ const App = () => {
 
           {/* Route to the default page not found, page */}
           <Route path='*' exact={true}>
-            <NotFound />
+            {pages[pages.length - 1]}
           </Route>
         </Switch>
       </Router>
