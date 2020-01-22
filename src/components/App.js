@@ -28,42 +28,15 @@ const App = () => {
     return <Section header={'Not Found'} />;
   };
 
-  //Pass each page component into this array
-  //Ensure your landing page is first, and your default page not found, last.
-  const pages = [
-    <Landing />,
-    <Info />,
-    <Donate />,
-    <NotFound />
-  ];
-
   return (
     <div className="App">
       <Router>
-        <Navbar pages={pages} />
+        <Navbar />
         <Switch>
-
-          {/* Route to the Landing page */}
-          <Route key="Landing" exact path={`/`}>
-            <div>
-              {pages[0]}
-            </div>
-          </Route>
-
-          {/* Dynamically render route link in the Navbar 
-          excluding Landing and Not Found pages */}
-          {pages.map((page) => {
-            return <Route key={page.type.name} path={`/${page.type.name}`}>
-              <div>
-                {page}
-              </div>
-            </Route>
-          })}
-
-          {/* Route to the default page not found, page */}
-          <Route path='*' exact={true}>
-            <NotFound />
-          </Route>
+          <Route exact path="/" component={Landing} />
+          <Route path="/info" component={Info} />
+          <Route path="/donate" component={Donate} />
+          <Route component={NotFound} />
         </Switch>
       </Router>
     </div>

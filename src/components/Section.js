@@ -3,6 +3,15 @@ import React from 'react';
 import '../styles/Section.css';
 
 const Section = props => {
+  // Can we remove this comment?
+  /* const sectionStyle = {
+    backgroundImage: `url(${props.image})`,
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    height: '100vh',
+    width: '100%'
+  } */
 
   // Conditionally render aussieImage for LandingPage component
   const renderAussieImage = () => {
@@ -12,6 +21,7 @@ const Section = props => {
   };
 
   return (
+    /* <section style={sectionStyle}>*/
     <section
       className="Section"
       style={{ backgroundImage: `url(${props.image})` }}

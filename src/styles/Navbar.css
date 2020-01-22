@@ -10,12 +10,8 @@
 .Navbar-Logo {
   color: white;
   margin: 0 5rem;
-  padding: 0 1.5rem;
+  padding: 1.5rem;
   font-size: 28px;
-  width: 50%;
-}
-
-.Navbar-Logo-Link {
   width: 50%;
 }
 
