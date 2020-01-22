@@ -1,0 +1,9 @@
+.Section {
+  /* Would love to see if we can look into a way
+    to stop the image from resizing desktop size changes */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}

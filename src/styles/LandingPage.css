@@ -1,0 +1,12 @@
+.aussieImageWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 250px;
+}
+
+.aussieImageWrapper img {
+    height: auto;
+    width: 400px;
+    
+}
