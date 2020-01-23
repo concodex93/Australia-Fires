@@ -12,10 +12,6 @@ const App = () => {
   // We could move these functional components to seperare files once
   // we have start working on them
 
-  // const Landing = () => {
-  //   return <Section image={backgroundImage} />;
-  // };
-
   const Info = () => {
     return <Section header={'Section 2'} />;
   };
@@ -28,15 +24,42 @@ const App = () => {
     return <Section header={'Not Found'} />;
   };
 
+  //Pass each page component into this array
+  //Ensure your landing page is first, and your default page not found, last.
+  const pages = [
+    <Landing />,
+    <Info />,
+    <Donate />,
+    <NotFound />
+  ];
+
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        <Navbar pages={pages} />
         <Switch>
-          <Route exact path="/" component={Landing} />
-          <Route path="/info" component={Info} />
-          <Route path="/donate" component={Donate} />
-          <Route component={NotFound} />
+
+          {/* Route to the Landing page */}
+          <Route key="Landing" exact path={`/`}>
+            <div>
+              {pages[0]}
+            </div>
+          </Route>
+
+          {/* Dynamically render route link in the Navbar 
+          excluding Landing and Not Found pages */}
+          {pages.map((page) => {
+            return <Route key={page.type.name} path={`/${page.type.name}`}>
+              <div>
+                {page}
+              </div>
+            </Route>
+          })}
+
+          {/* Route to the default page not found, page */}
+          <Route path='*' exact={true}>
+            {pages[pages.length - 1]}
+          </Route>
         </Switch>
       </Router>
     </div>
