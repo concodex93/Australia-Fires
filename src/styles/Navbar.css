@@ -8,11 +8,13 @@
 }
 
 .Navbar-Logo {
+  position: fixed;
   color: white;
   margin: 0 5rem;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   font-size: 28px;
-  width: 50%;
+  top: 20px;
+  width: 60%;
 }
 
 .Navbar-Logo-Link {
@@ -28,6 +30,7 @@
 }
 
 .Navbar-Menu {
+  position: fixed;
   display: flex;
   width: 100%;
   list-style-type: none;
@@ -41,5 +44,6 @@
 }
 
 .Navbar-Menu-ListItem-Link {
+  margin: 0 5rem;
   color: white !important;
 }
