@@ -16,7 +16,7 @@ const Section = props => {
       className="Section"
       style={{ backgroundImage: `url(${props.image})` }}
     >
-      <h1>{props.header}</h1>
+      {/*<h1>{props.header}</h1>*/}
       {renderAussieImage()}
     </section>
   );
