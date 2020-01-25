@@ -6,14 +6,14 @@ import australiaImage from '../images/Australia.png';
 import '../styles/LandingPage.css';
 
 const Landing = () => {
-  const renderImage = () => {
+  const aussieImage = () => {
     return (
       <div className="aussieImageWrapper">
         <img className="aussieImage" src={australiaImage} alt="austalia" />;
       </div>
     );
   };
-  return <Section aussieImage={renderImage} image={backgroundImage} />;
+  return <Section aussieImage={aussieImage} image={backgroundImage} />;
 };
 
 export default Landing;

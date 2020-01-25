@@ -3,21 +3,19 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
 import Section from './Section';
 import Landing from './LandingPage';
+import News from './News';
 
 import '../styles/App.css';
 
 // Main Landing Page
 
 const App = () => {
+  
   // We could move these functional components to seperare files once
   // we have start working on them
 
   const Info = () => {
     return <Section header={'Section 2'} />;
-  };
-
-  const News = () => {
-    return <Section header={'Section 3'} />;
   };
 
   const Donate = () => {
@@ -28,10 +26,7 @@ const App = () => {
     return <Section header={'Not Found'} />;
   };
 
-  //Pass each page component into this array
   //Ensure your landing page is first, and your default page not found, last.
-  // const _pages = [<Landing />, <Info />, <Donate />, <NotFound />];
-
   const data = {
     pages: [
       {
