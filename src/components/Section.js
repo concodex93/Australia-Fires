@@ -3,21 +3,18 @@ import React from 'react';
 import '../styles/Section.css';
 
 const Section = props => {
-
-  // Conditionally render aussieImage for LandingPage component
-  const renderAussieImage = () => {
-    if (props.aussieImage) {
-      return props.aussieImage();
-    }
-  };
+  const { header, aussieImage, image } = props;
 
   return (
     <section
       className="Section"
-      style={{ backgroundImage: `url(${props.image})` }}
+      style={{ backgroundImage: `url(${image})` }}
     >
-      {/*<h1>{props.header}</h1>*/}
-      {renderAussieImage()}
+
+      {/*You can also conditionally render by just including the condition inline,
+     would we rather do this to avoid having to call a function?*/}
+      {header && <h1 className="Section-Title">{header}</h1>}
+      {aussieImage && aussieImage()}
     </section>
   );
 };
