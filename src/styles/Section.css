@@ -7,3 +7,9 @@
   height: 100vh;
   width: 100%;
 }
+
+h1.Section-Title {
+  /* Just styling like this for now to avoid it getting stuck behind the logo link */
+  text-align:center;
+  padding-top: 8%;
+}
