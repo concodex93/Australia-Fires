@@ -1,30 +1,17 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
-import Section from './Section';
 import Landing from './LandingPage';
 import News from './News';
+import Info from './Info';
+import Donate from './Donate';
+import NotFound from './NotFound';
 
 import '../styles/App.css';
 
 // Main Landing Page
 
 const App = () => {
-  
-  // We could move these functional components to seperare files once
-  // we have start working on them
-
-  const Info = () => {
-    return <Section header={'Section 2'} />;
-  };
-
-  const Donate = () => {
-    return <Section header={'Section 4'} />;
-  };
-
-  const NotFound = () => {
-    return <Section header={'Not Found'} />;
-  };
 
   //Ensure your landing page is first, and your default page not found, last.
   const data = {
