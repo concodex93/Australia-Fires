@@ -9,28 +9,6 @@
 }
 
 h1.Section-Title {
-  /* Just styling like this for now to avoid it getting stuck behind the logo link */
   text-align: center;
-  padding-top: 8%;
 }
 
-.News-Headline-Container {
-  /* Just styling like this for now */
-  position: relative;
-  text-align: center;
-  top: 10%;
-}
-
-.News-Headline-List {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 0 10px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.Acticle-Image {
-  width: 250px;
-  grid-row-end: span 2;
-}

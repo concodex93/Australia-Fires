@@ -50,7 +50,7 @@ const App = () => {
         <Switch>
           {/* Route to the Landing page */}
           <Route key={firstPageName} exact path={`/`}>
-            <div>{firsPageComponentName}</div>
+            <div className="Wrapper">{firsPageComponentName}</div>
           </Route>
 
           {/* Dynamically render route link in the Navbar 
@@ -60,7 +60,7 @@ const App = () => {
             let { componentName } = page;
             return (
               <Route key={name} path={`/${name}`}>
-                <div>{componentName}</div>
+                <div className="Wrapper">{componentName}</div>
               </Route>
             );
           })}
