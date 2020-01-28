@@ -29,7 +29,6 @@ const News = () => {
   }, []);
 
   const newsList = () => {
-    console.log(articles);
     return <NewsList articles={articles} />;
   }
 
