@@ -4,7 +4,9 @@ import Button from './Button';
 import '../styles/NewsList.css';
 
 const NewsList = props => {
+
   const { articles, next, prev, pagination } = props;
+
   if (!articles) return <div>:)</div>;
   if (articles.length > 0) {
     return (
@@ -33,10 +35,10 @@ const NewsList = props => {
         </ul>
         <div className="Button-Page-List">
           {prev && (
-            <Button title={'Previous'} prev={prev} pagination={pagination} />
+            <Button text={'Previous'} onClick={() => pagination(prev.page)} />
           )}
           {next && (
-            <Button title={'Next'} next={next} pagination={pagination} />
+            <Button text={'Next'} onClick={() => pagination(next.page)} />
           )}
         </div>
       </div>
@@ -45,3 +47,4 @@ const NewsList = props => {
 };
 
 export default NewsList;
+

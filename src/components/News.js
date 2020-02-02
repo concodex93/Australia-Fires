@@ -71,12 +71,12 @@ const News = () => {
       {loaded ? (
         <Section newsList={newsList} />
       ) : (
-        <div className="Loading">
-          <div class="ui active dimmer">
-            <div class="ui text loader">Loading</div>
+          <div className="Loading">
+            <div className="ui active dimmer">
+              <div className="ui text loader">Loading</div>
+            </div>
           </div>
-        </div>
-      )}
+        )}
     </>
   );
 };
