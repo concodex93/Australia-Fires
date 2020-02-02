@@ -3,7 +3,7 @@ import React from 'react';
 import './Section.css';
 
 const Section = props => {
-  const { header, aussieImage, image, newsList } = props;
+  const { header, aussieImage, image, newsList, getDonorList } = props;
 
   return (
     <section
@@ -18,6 +18,7 @@ const Section = props => {
       {header && <h1 className="Section-Title">{header}</h1>}
       {aussieImage && aussieImage()}
       {newsList && newsList()}
+      {getDonorList && getDonorList()}
     </section>
   );
 };

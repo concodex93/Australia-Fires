@@ -5,7 +5,6 @@ import Emoji from '../Emoji/Emoji';
 import './Info.css';
 
 const Info = props => {
-  //return <Section header={'Section 2'} />;
 
   return (
     <div className="Information-Container">
