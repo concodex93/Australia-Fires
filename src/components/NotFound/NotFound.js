@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from './Section';
+import Section from '../Section/Section';
 
-import '../styles/NotFound.css';
+import './NotFound.css';
 
 const NotFound = props => {
 

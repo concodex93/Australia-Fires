@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from './Section';
+import Section from '../Section/Section';
 
-import '../styles/Donate.css';
+import './Donate.css';
 
 const Donate = props => {
 

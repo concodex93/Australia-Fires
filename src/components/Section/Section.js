@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/Section.css';
+import './Section.css';
 
 const Section = props => {
   const { header, aussieImage, image, newsList } = props;

@@ -1,8 +1,8 @@
 import React from 'react';
-import Section from './Section';
-import Emoji from './Emoji';
+import Section from '../Section/Section';
+import Emoji from '../Emoji/Emoji';
 
-import '../styles/Info.css';
+import './Info.css';
 
 const Info = props => {
   //return <Section header={'Section 2'} />;

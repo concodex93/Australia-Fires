@@ -1,9 +1,9 @@
 import React from 'react';
-import Section from './Section';
-import backgroundImage from '../images/background.jpg';
-import australiaImage from '../images/Australia.png';
+import Section from '../Section/Section';
+import backgroundImage from '../../images/background.jpg';
+import australiaImage from '../../images/Australia.png';
 
-import '../styles/LandingPage.css';
+import './LandingPage.css';
 
 const Landing = () => {
   const aussieImage = () => {

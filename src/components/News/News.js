@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import news from '../apis/news';
-import Section from './Section';
-import NewsList from './NewsList';
+import news from '../../apis/news';
+import Section from '../Section/Section';
+import NewsList from '../NewsList/NewsList';
 
-import '../styles/News.css';
+import './News.css';
 
 const News = () => {
   // State
