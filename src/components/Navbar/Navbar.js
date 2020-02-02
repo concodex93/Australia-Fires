@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from '../images/Logo.png';
-import '../styles/Navbar.css';
+import logo from '../../images/Logo.png';
+import './Navbar.css';
 
 const Navbar = props => {
   const { pages } = props;

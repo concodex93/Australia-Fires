@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import Navbar from './Navbar';
-import Landing from './LandingPage';
-import News from './News';
-import Info from './Info';
-import Donate from './Donate';
-import NotFound from './NotFound';
+import Navbar from './Navbar/Navbar';
+import Landing from './LandingPage/LandingPage';
+import News from './News/News';
+import Info from './Info/Info';
+import Donate from './Donate/Donate';
+import NotFound from './NotFound/NotFound';
 
-import '../styles/App.css';
+import './App.css';
 
 // Main Landing Page
 

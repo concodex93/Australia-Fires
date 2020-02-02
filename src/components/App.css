@@ -1,0 +1,9 @@
+.App {
+    height: 100vh;
+    font-family: Poppins, sans-serif;
+}
+
+.Wrapper{
+    /* margin-top: 100px; */
+    background-image: linear-gradient(180deg, #000000 0%, #B82222 100%);
+}
