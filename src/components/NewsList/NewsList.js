@@ -1,34 +1,23 @@
 import React from 'react';
 import Button from '../Button/Button';
+import Card from '../Card/Card';
 
 import './NewsList.css';
 
 const NewsList = props => {
+  const { articles, next, prev, pagination, donors } = props;
+  const list = articles ? articles : donors;
 
-  const { articles, next, prev, pagination } = props;
-
-  if (!articles) return <div>:)</div>;
-  if (articles.length > 0) {
+  if (!list)
+    return <div>Ops, looks like there's no news? Try refreshing the page.</div>;
+  if (list.length > 0) {
     return (
       <div className="News-Headline-Container">
         <ul className="News-Headline-List">
-          {articles.map((article, index) => {
+          {list.map((item, index) => {
             return (
               <li key={index} className="News-Headline-List-Items">
-                <div className="ui card">
-                  <a href={article.url}>
-                    <img
-                      className="Article-Image"
-                      src={article.urlToImage}
-                      alt={article.title}
-                    />
-                  </a>
-                  <div className="content">
-                    <a className="header" href={article.url}>
-                      {article.title}
-                    </a>
-                  </div>
-                </div>
+                <Card item={item} />
               </li>
             );
           })}
@@ -47,4 +36,3 @@ const NewsList = props => {
 };
 
 export default NewsList;
-
